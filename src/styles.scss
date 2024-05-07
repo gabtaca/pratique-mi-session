@@ -1,0 +1,51 @@
+$color_primary:rgb(166, 166, 166) ;
+$color_secondary: rgb(81, 81, 81);
+
+$mobile-size: 768px;
+$mobile-up: "(min-width: #{$mobile-size})";
+$mobile-down: "(max-width: #{$mobile-size})";
+
+body{
+    display: flex;
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+    max-height: 100%;
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        max-height: 100%;
+        background-color: $color_primary;
+        @media #{$mobile-up} {
+            flex-direction: row;
+        }
+        .container__01{
+            display: flex;
+            width: 90%;
+            max-width: 100%;
+            height:45%;
+            background-color: $color_secondary;
+            @media #{$mobile-up} {
+                width: 45%;
+                max-width: 100%;
+            }
+        }
+        .container__02{
+            display: flex;
+            width: 90%;
+            max-width: 100%;
+            height:45%;
+            background-color: $color_secondary;        
+            @media #{$mobile-up} {
+                width: 45%;
+                max-width: 100%;
+            }
+        }
+    }
+}
